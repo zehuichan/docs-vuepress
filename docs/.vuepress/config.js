@@ -31,6 +31,15 @@ module.exports = {
         collapsable: false,
         children: [
           ['/code/', 'code相关'],
+          ['/code/request.js', 'axios封装v1'],
+          ['/code/request.v2.js', 'axios封装v2'],
+        ]
+      },
+      {
+        title: 'style',
+        collapsable: false,
+        children: [
+          ['/style/', '样式相关'],
         ]
       },
       {
