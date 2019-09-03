@@ -1,6 +1,8 @@
-## 记录初始化页面样式
+## 页面样式初始化
 
-```
+### index.less|.scss
+
+``` less
 body {
   line-height: 1.5;
   font-size: 14px;
@@ -94,4 +96,17 @@ div:focus {
     height: 0;
   }
 }
+```
+
+### 使用方法
+
+``` javascript
+// main.js
+
+// A modern alternative to CSS resets
+import 'normalize.css/normalize.css'
+// or
+// import 'reset.css/reset.css'
+
+import '@/assets/less/index.less'
 ```

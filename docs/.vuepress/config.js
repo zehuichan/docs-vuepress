@@ -15,47 +15,45 @@ module.exports = {
     displayAllHeaders: true, // 默认值：false
     sidebarDepth: 0,
     lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间
-    sidebar: [
-      // ['url', '标题'],
-      ['/', '简介'],
-      {
-        title: 'javascript',
-        collapsable: false,
-        children: [
-          // ['url', '标题'],
-          ['/javascript/', 'javascript相关'],
-        ]
-      },
-      {
-        title: 'code',
-        collapsable: false,
-        children: [
-          ['/code/', 'code相关'],
-          ['/code/request.js', 'axios封装v1'],
-          ['/code/request.v2.js', 'axios封装v2'],
-        ]
-      },
-      {
-        title: 'style',
-        collapsable: false,
-        children: [
-          ['/style/', '样式相关'],
-        ]
-      },
-      {
-        title: 'vue',
-        collapsable: false,
-        children: [
-          ['/vue/', 'vue相关'],
-        ]
-      },
-      {
-        title: 'webpack',
-        collapsable: false,
-        children: [
-          ['/webpack/', 'webpack相关'],
-        ]
-      },
-    ]
+    nav: [
+      {text: 'Home', link: '/'},
+      {text: '积累', link: '/blog/'},
+      {text: '项目', link: '/project/'},
+      {text: 'GitHub', link: 'https://github.com/zehuichan'},
+    ],
+    sidebar: {
+      '/blog/': [
+        ['javascript/', 'javascript'],
+        {
+          title: '代码块',
+          collapsable: false,
+          children: [
+            ['code/FastClick', 'FastClick用法'],
+            ['code/request.js', 'request.js'],
+            ['code/request.v2.js', 'request.v2.js'],
+          ]
+        },
+        {
+          title: 'css',
+          collapsable: false,
+          children: [
+            ['style/basic', '页面样式初始化'],
+            ['style/tap', '长按样式'],
+          ]
+        },
+        {
+          title: 'vue',
+          collapsable: false,
+          children: [
+            ['vue/', '简介'],
+            ['vue/plugins-微信jssdk', '微信jssdk'],
+            ['vue/plugins-高德地图API', '高德地图API'],
+          ]
+        },
+        ['webpack/', 'webpack'],
+      ],
+      '/project/':[
+      ]
+    }
   }
 }

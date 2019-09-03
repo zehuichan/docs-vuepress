@@ -1,12 +1,14 @@
 ## request.v2.js
 
-::: tip 提示
+::: tip
 axios请求超时,设置重新请求的解决方法  
 提示可根据应用的UI库来变更，这边展示我用的是vant-ui  
 废话不多说，直接贴代码
 :::
 
-```
+> https://github.com/axios/axios/issues/164#issuecomment-327837467
+
+``` javascript
 import {Toast} from 'vant'
 import axios from 'axios'
 import store from '@/store'

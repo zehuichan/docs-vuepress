@@ -1,11 +1,11 @@
 ## request.js
 
-::: tip 提示
+::: tip
 提示可根据应用的UI库来变更，这边展示我用的是vant-ui  
 废话不多说，直接贴代码
 :::
 
-```
+``` javascript
 import {Toast} from 'vant'
 import axios from 'axios'
 import store from '@/store'
@@ -54,7 +54,7 @@ export default http
 
 > 举个栗子...
 
-```
+``` javascript
 // api/index.js
 
 import request from '@/utils/request'
