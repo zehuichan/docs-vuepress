@@ -39,6 +39,7 @@ module.exports = {
           children: [
             ['style/basic', '页面样式初始化'],
             ['style/tap', '长按样式'],
+            ['style/debug', 'debug.css'],
           ]
         },
         {
