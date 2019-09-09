@@ -52,6 +52,7 @@ module.exports = {
           ]
         },
         ['webpack/', 'webpack'],
+        ['wechat/', 'wechat'],
       ],
       '/project/':[
       ]
