@@ -29,6 +29,7 @@ module.exports = {
           collapsable: false,
           children: [
             ['code/FastClick', 'FastClick用法'],
+            ['code/图片转base64', '图片转base64'],
             ['code/request.js', 'request.js'],
             ['code/request.v2.js', 'request.v2.js'],
           ]
