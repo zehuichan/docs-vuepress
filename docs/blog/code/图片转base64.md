@@ -23,11 +23,16 @@ export function readFile(file, resultType = 'dataUrl') {
 
 ``` vue
 <template>
-  <input type="file" accept="image/*" @change="onChange" /> 
+  <input type="file" accept="image/*" multiple @change="onChange" /> 
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      fileList: []
+    }
+  },
   methods: {
     onChange(event) {
       let { files } = event.target
@@ -37,12 +42,25 @@ export default {
       this.readFile(files)
     },
     readFile(files) {
-      Promise.all(files.map(file => readFile(file, 'dataUrl'))).then(contents =>{
-        const fileList = files.map((file, index) => ({
-          file,
-          content: contents[index]
-        }))
-      })
+      if (Array.isArray(files)) {
+        Promise.all(files.map(file => readFile(file))).then(contents => {
+          const fileList = files.map((file, index) => ({
+            file,
+            content: contents[index]
+          }))
+
+          this.fileList = [...fileList]
+        })
+      } else {
+        readFile(files).then(content => {
+          const fileList = {
+            file: files,
+            content
+          }
+
+          this.fileList = [...fileList]
+        })
+      }
     }
   }
 }
