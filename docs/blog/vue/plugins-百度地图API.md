@@ -1,42 +1,42 @@
-## 高德地图API
+## 百度地图API
 
 ```
 目录结构
 src
 |-- plugins
-|  |-- amap
+|  |-- bmap
 |    |-- index.js
-|    |-- amap.js
+|    |-- bmap.js
 ```
 
 ### index.js
 
 ```javascript
 // index.js
-import amap from './amap'
+import bmap from './bmap'
 
 const plugin = {
   install(Vue) {
-    Vue.prototype.$amap = amap
-    Vue.amap = amap
+    Vue.prototype.$bmap = bmap
+    Vue.bmap = bmap
   },
-  $amap: amap
+  $bmap: bmap
 }
 
 export default plugin
 export const install = plugin.install
 ```
 
-### amap.js
+### bmap.js
 
 ```javascript
 // amap.js
-const url = `//webapi.amap.com/maps?v=1.4.13&key=您申请的key值&callback=initAMap`
+const url = `//api.map.baidu.com/api?v=2.0&ak=您的密钥&callback=init`
 
-export default function amap() {
+export default function bmap() {
   return new Promise((resolve, reject) => {
-    if (window.AMap) {
-      resolve(window.AMap)
+    if (window.BMap) {
+      resolve(window.BMap)
     } else {
       const script = document.createElement('script')
       script.type = 'text/javascript'
@@ -46,7 +46,7 @@ export default function amap() {
       document.head.appendChild(script)
     }
     window.initAMap = () => {
-      resolve(window.AMap)
+      resolve(window.BMap)
     }
   })
 }
@@ -64,15 +64,11 @@ export default {
     },
     created() {
       const self = this
-      this.$amap().then((AMap) => {
-        AMap.plugin(['AMap.CitySearch'], function () {
-          const citySearch = new AMap.CitySearch()
-          citySearch.getLocalCity((status, result) => {
-            if (status === 'complete' && result.info === 'OK') {
-              // 查询成功，result即为当前所在城市信息
-              self.city = result
-            }
-          })
+      this.$bmap().then((BMap) => {
+        const citySearch = new BMap.LocalCity()
+        citySearch.get((result) => {
+          // 查询成功，result即为当前所在城市信息
+          self.city = result
         })
       })
     }

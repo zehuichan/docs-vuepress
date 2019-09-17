@@ -50,6 +50,7 @@ module.exports = {
             ['vue/', '简介'],
             ['vue/plugins-微信jssdk', '微信jssdk'],
             ['vue/plugins-高德地图API', '高德地图API'],
+            ['vue/plugins-百度地图API', '百度地图API'],
           ]
         },
         ['webpack/', 'webpack'],
