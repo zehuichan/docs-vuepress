@@ -15,16 +15,11 @@ src
 // index.js
 import bmap from './bmap'
 
-const plugin = {
+export default {
   install(Vue) {
     Vue.prototype.$bmap = bmap
-    Vue.bmap = bmap
-  },
-  $bmap: bmap
+  }
 }
-
-export default plugin
-export const install = plugin.install
 ```
 
 ### bmap.js
@@ -39,13 +34,13 @@ export default function bmap() {
       resolve(window.BMap)
     } else {
       const script = document.createElement('script')
-      script.type = 'text/javascript'
+      script.charset = 'utf-8'
       script.async = true
       script.src = url
       script.onerror = reject
       document.head.appendChild(script)
     }
-    window.initAMap = () => {
+    window.init = () => {
       resolve(window.BMap)
     }
   })

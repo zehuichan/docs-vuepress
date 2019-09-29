@@ -15,16 +15,11 @@ src
 // index.js
 import amap from './amap'
 
-const plugin = {
+export default {
   install(Vue) {
     Vue.prototype.$amap = amap
-    Vue.amap = amap
-  },
-  $amap: amap
+  }
 }
-
-export default plugin
-export const install = plugin.install
 ```
 
 ### amap.js
@@ -39,7 +34,7 @@ export default function amap() {
       resolve(window.AMap)
     } else {
       const script = document.createElement('script')
-      script.type = 'text/javascript'
+      script.charset = 'utf-8'
       script.async = true
       script.src = url
       script.onerror = reject
