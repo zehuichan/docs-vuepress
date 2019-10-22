@@ -54,7 +54,15 @@ module.exports = {
           ]
         },
         ['webpack/', 'webpack'],
-        ['wechat/', 'wechat'],
+        {
+          title: 'wechat',
+          collapsable: false,
+          children: [
+            ['wechat/', '简介'],
+            ['wechat/API-chooseWXPay', 'chooseWXPay'],
+            ['wechat/API-chooseImage', 'chooseImage'],
+          ]
+        },
         ['git/', 'git'],
       ],
       '/project/':[

@@ -6,9 +6,8 @@ export function readFile(file, resultType = 'dataUrl') {
   return new Promise(resolve => {
     const reader = new FileReader()
 
-    reader.onload = event => {
-      resolve(event.target.result)
-    }
+    reader.onload = (e) => resolve(e.target.result)
+    reader.onerror = error => reject(error)
 
     if (resultType === 'dataUrl') {
       reader.readAsDataURL(file)
