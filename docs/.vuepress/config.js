@@ -55,6 +55,13 @@ module.exports = {
         },
         ['webpack/', 'webpack'],
         {
+          title: '小程序',
+          collapsable: false,
+          children: [
+            ['mp/小程序接入腾讯云即时通讯IM', '小程序接入腾讯云即时通讯IM']
+          ]
+        },
+        {
           title: 'wechat',
           collapsable: false,
           children: [
@@ -65,8 +72,7 @@ module.exports = {
         },
         ['git/', 'git'],
       ],
-      '/project/':[
-      ]
+      '/project/': []
     }
   }
 }
