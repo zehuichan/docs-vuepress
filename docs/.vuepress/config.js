@@ -12,7 +12,7 @@ module.exports = {
     activeHeaderLinks: false, // 默认值：true
     displayAllHeaders: true, // 默认值：false
     sidebarDepth: 0,
-    lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间
+    lastUpdated: '上次更新', // 文档更新时间：每个文件git最后提交的时间
     nav: [
       {text: 'Home', link: '/'},
       {text: '积累', link: '/blog/'},
@@ -96,6 +96,7 @@ module.exports = {
     }
   },
   plugins: [
+    '@vuepress/last-updated',
     '@vuepress/back-to-top',
     '@vuepress/nprogress'
   ]
