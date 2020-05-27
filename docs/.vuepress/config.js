@@ -17,6 +17,7 @@ module.exports = {
       {text: 'Home', link: '/'},
       {text: '积累', link: '/blog/'},
       {text: '项目', link: '/project/'},
+      {text: '关于我', link: '/resume/'},
       {text: 'GitHub', link: 'https://github.com/zehuichan'},
     ],
     sidebar: {
