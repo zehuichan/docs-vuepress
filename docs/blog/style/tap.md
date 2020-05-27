@@ -2,7 +2,7 @@
 
 ### tap.css
 
-``` css
+```css
 .tap-active {
   tap-highlight-color: rgba(0, 0, 0, 0);
   user-select: none;
@@ -41,6 +41,6 @@
 
 ### 使用方法
 
-``` html
+```html
 <div class="card tap-active"></div> 
 ```

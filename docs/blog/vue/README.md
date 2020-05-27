@@ -15,3 +15,5 @@ import AmapPlugin from '@/plugins/amap/index'
 Vue.use(WechatPlugin)
 Vue.use(AmapPlugin)
 ```
+
+### vue-cli3下增加CDN

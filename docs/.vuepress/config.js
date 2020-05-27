@@ -5,8 +5,6 @@ module.exports = {
   head: [
     ['link', {rel: 'icon', href: '/logo.png'}]
   ],
-  host: '0.0.0.0',
-  port: 9527,
   markdown: {
     lineNumbers: true // 代码块显示行号
   },
@@ -39,6 +37,8 @@ module.exports = {
           collapsable: false,
           children: [
             ['style/basic', '页面样式初始化'],
+            ['style/unit', '原子样式'],
+            ['style/var', '一些样式声明'],
             ['style/tap', '长按样式'],
             ['style/debug', 'debug.css'],
           ]
@@ -47,10 +47,11 @@ module.exports = {
           title: 'vue',
           collapsable: false,
           children: [
-            ['vue/', '简介'],
+            ['vue/', 'Introduction'],
             ['vue/plugins-微信jssdk', '微信jssdk'],
             ['vue/plugins-高德地图API', '高德地图API'],
             ['vue/plugins-百度地图API', '百度地图API'],
+            ['vue/cli-CDN', 'CDN'],
           ]
         },
         ['webpack/', 'webpack'],
@@ -58,6 +59,7 @@ module.exports = {
           title: '小程序',
           collapsable: false,
           children: [
+            ['mp/基于uniapp架构的小程序模板', '基于uniapp架构的小程序模板'],
             ['mp/小程序接入腾讯云即时通讯IM', '小程序接入腾讯云即时通讯IM']
           ]
         },
@@ -65,14 +67,36 @@ module.exports = {
           title: 'wechat',
           collapsable: false,
           children: [
-            ['wechat/', '简介'],
+            ['wechat/', 'Introduction'],
             ['wechat/API-chooseWXPay', 'chooseWXPay'],
             ['wechat/API-chooseImage', 'chooseImage'],
           ]
         },
         ['git/', 'git'],
       ],
-      '/project/': []
+      '/project/': [
+        {
+          title: '基于vant-ui组件库',
+          collapsable: false,
+          children: [
+            ['vant/', 'Introduction'],
+            ['vant/vant-tpl', 'vant-tpl'],
+            ['vant/vant-mall-tpl', 'vant-mall-tpl'],
+          ]
+        },
+        {
+          title: '基于element-ui组件库',
+          collapsable: false,
+          children: [
+            ['element/', 'Introduction'],
+            ['element/vant-mall-admin', 'vant-mall-admin'],
+          ]
+        }
+      ]
     }
-  }
+  },
+  plugins: [
+    '@vuepress/back-to-top',
+    '@vuepress/nprogress'
+  ]
 }

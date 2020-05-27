@@ -2,16 +2,15 @@
 
 ### index.less|.scss
 
-``` less
+```less
 body {
-  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';;
+  line-height: 1.5715;
   font-size: 14px;
-  height: 100%;
-  color: #333;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  color: #323333;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #f4f4f4;
 }
 
 label {

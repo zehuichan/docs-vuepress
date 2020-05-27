@@ -2,7 +2,7 @@
 
 ### debug.css
 
-``` css
+```css
 /*! debug.css | MIT License | zaydek.github.com/debug.css */
 *:not(path):not(g) {
 	color:                    hsla(210, 100%, 100%, 0.9) !important;

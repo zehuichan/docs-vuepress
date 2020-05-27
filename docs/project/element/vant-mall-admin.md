@@ -1,0 +1,1 @@
+<doc-simulator :style="{width:'740px'}" src="https://zehuichan.gitee.io/vant-mall-admin"/>
