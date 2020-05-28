@@ -93,6 +93,10 @@ module.exports = {
             ['element/vant-mall-admin', 'vant-mall-admin'],
           ]
         }
+      ],
+      '/resume/':[
+        ['关于我', '关于我'],
+        ['面试', '面试'],
       ]
     }
   },
