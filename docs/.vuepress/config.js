@@ -3,7 +3,10 @@ module.exports = {
   title: '前端日常积累',
   description: '记录点滴',
   head: [
-    ['link', {rel: 'icon', href: '/logo.png'}]
+    ['link', {
+      rel: 'icon',
+      href: '/logo.png'
+    }]
   ],
   markdown: {
     lineNumbers: true // 代码块显示行号
@@ -13,12 +16,26 @@ module.exports = {
     displayAllHeaders: true, // 默认值：false
     sidebarDepth: 0,
     lastUpdated: '上次更新', // 文档更新时间：每个文件git最后提交的时间
-    nav: [
-      {text: 'Home', link: '/'},
-      {text: '积累', link: '/blog/'},
-      {text: '项目', link: '/project/'},
-      {text: '关于我', link: '/resume/'},
-      {text: 'GitHub', link: 'https://github.com/zehuichan'},
+    nav: [{
+        text: 'Home',
+        link: '/'
+      },
+      {
+        text: '积累',
+        link: '/blog/'
+      },
+      {
+        text: '项目',
+        link: '/project/'
+      },
+      {
+        text: '关于我',
+        link: '/resume/'
+      },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/zehuichan'
+      },
     ],
     sidebar: {
       '/blog/': [
@@ -75,8 +92,7 @@ module.exports = {
         },
         ['git/', 'git'],
       ],
-      '/project/': [
-        {
+      '/project/': [{
           title: '基于vant-ui组件库',
           collapsable: false,
           children: [
@@ -94,10 +110,11 @@ module.exports = {
           ]
         }
       ],
-      '/resume/':[
+      '/resume/': [
         ['关于我', '关于我'],
         ['2020年5月4日', '2020年5月4日'],
         ['2020年5月29日', '2020年5月29日'],
+        ['2020年6月15日', '2020年6月15日'],
       ]
     }
   },
