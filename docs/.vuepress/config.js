@@ -1,3 +1,5 @@
+console.log(process.env.NODE_ENV)
+
 module.exports = {
   base: '/',
   title: '前端日常积累',
@@ -16,7 +18,8 @@ module.exports = {
     displayAllHeaders: true, // 默认值：false
     sidebarDepth: 0,
     lastUpdated: '上次更新', // 文档更新时间：每个文件git最后提交的时间
-    nav: [{
+    nav: [
+      {
         text: 'Home',
         link: '/'
       },
@@ -92,7 +95,8 @@ module.exports = {
         },
         ['git/', 'git'],
       ],
-      '/project/': [{
+      '/project/': [
+        {
           title: '基于vant-ui组件库',
           collapsable: false,
           children: [
@@ -114,7 +118,7 @@ module.exports = {
         ['关于我', '关于我'],
         ['2020年5月4日', '2020年5月4日'],
         ['2020年5月29日', '2020年5月29日'],
-        ['2020年6月15日', '2020年6月15日'],
+        ['20200615、20200622', '20200615、20200622'],
       ]
     }
   },
