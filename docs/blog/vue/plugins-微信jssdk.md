@@ -7,7 +7,7 @@
 目录结构
 src
 |-- plugins
-|  |-- wechat
+|  |-- jweixin
 |    |-- index.js
 |    |-- jweixin-1.4.0.js
 |    |-- jweixin-1.6.0.js
@@ -19,16 +19,14 @@ src
 // index.js
 import wx from './jweixin-1.6.0'
 
-const plugin = {
-  install(Vue) {
-    Vue.prototype.$wechat = wx
-    Vue.wechat = wx
-  },
-  $wechat: wx
+function plugin(Vue) {
+  if (plugin.installed) {
+    return
+  }
+  Vue.prototype.$wx = wx
 }
 
 export default plugin
-export const install = plugin.install
 ```
 
 ### jweixin-1.6.0.js
@@ -50,11 +48,10 @@ export const install = plugin.install
 // main.js
 
 // 微信jssdk
-import WechatPlugin from '@/plugins/wechat/index'
+import JWeixinPlugin from '@/plugins/jweixin'
 
-Vue.use(WechatPlugin)
+Vue.use(JWeixinPlugin)
 
 // 可以直接访问 wx 对象
-console.log(Vue.wechat)
-console.log(Vue.$wechat)
+console.log(Vue.$wx)
 ```

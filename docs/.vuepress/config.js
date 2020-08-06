@@ -1,7 +1,7 @@
 console.log(process.env.NODE_ENV)
 
 module.exports = {
-  base: '/',
+  base: '/gh-pages/',
   title: '前端日常积累',
   description: '记录点滴',
   head: [
