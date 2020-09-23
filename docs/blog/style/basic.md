@@ -7,14 +7,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';;
   line-height: 1.5715;
   font-size: 14px;
-  color: #323333;
+  color: @text;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  background: #f4f4f4;
+  background: @background;
 }
 
 label {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 html {
@@ -30,14 +30,6 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-}
-
-.no-padding {
-  padding: 0px !important;
-}
-
-.padding-content {
-  padding: 4px 0;
 }
 
 a:focus,
@@ -65,26 +57,6 @@ div:focus {
   float: left;
 }
 
-.pr-5 {
-  padding-right: 5px;
-}
-
-.pl-5 {
-  padding-left: 5px;
-}
-
-.block {
-  display: block;
-}
-
-.pointer {
-  cursor: pointer;
-}
-
-.inlineBlock {
-  display: block;
-}
-
 .clearfix {
   &:after {
     visibility: hidden;
@@ -93,6 +65,56 @@ div:focus {
     content: " ";
     clear: both;
     height: 0;
+  }
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.multi-ellipsis--l2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+.multi-ellipsis--l3 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+// 用于展示美化示例代码
+.demo-block {
+  padding: 16px;
+  background-color: #fff;
+}
+
+code {
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  overflow-x: auto;
+  line-height: 22px;
+  word-break: break-all;
+  white-space: pre-wrap;
+  color: #455a64;
+  font-family: Consolas, Menlo, Courier, monospace;
+  background: #f7f7f7;
+
+  & + code {
+    margin-top: 12px;
   }
 }
 ```

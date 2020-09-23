@@ -107,6 +107,7 @@
 
 .bg-white {
   background-color: #fff;
+  color: @text;
 }
 
 .bg-primary {
@@ -138,5 +139,4 @@
   background-color: @aux-default;
   color: #fff;
 }
-
 ```

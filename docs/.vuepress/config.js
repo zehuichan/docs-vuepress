@@ -5,13 +5,12 @@ module.exports = {
   title: '前端日常积累',
   description: '记录点滴',
   head: [
-    ['link', {
-      rel: 'icon',
-      href: '/logo.png'
-    }]
+    [
+      'link', { rel: 'icon', href: '/logo.png' }
+    ]
   ],
   markdown: {
-    lineNumbers: true // 代码块显示行号
+    lineNumbers: false // 代码块显示行号
   },
   themeConfig: {
     activeHeaderLinks: false, // 默认值：true
@@ -28,6 +27,10 @@ module.exports = {
         link: '/blog/'
       },
       {
+        text: 'JavaScript高级程序设计',
+        link: '/javascript/'
+      },
+      {
         text: '项目',
         link: '/project/'
       },
@@ -42,7 +45,6 @@ module.exports = {
     ],
     sidebar: {
       '/blog/': [
-        ['javascript/', 'javascript'],
         {
           title: '代码块',
           collapsable: false,
@@ -81,7 +83,7 @@ module.exports = {
           collapsable: false,
           children: [
             ['mp/基于uniapp架构的小程序模板', '基于uniapp架构的小程序模板'],
-            ['mp/小程序接入腾讯云即时通讯IM', '小程序接入腾讯云即时通讯IM']
+            ['mp/微信小程序接入腾讯云即时通讯IM', '微信小程序接入腾讯云即时通讯IM']
           ]
         },
         {
@@ -114,6 +116,7 @@ module.exports = {
           ]
         }
       ],
+      '/javascript/': [],
       '/resume/': [
         ['简历', '简历'],
         ['HTML和CSS', 'HTML和CSS'],
@@ -126,12 +129,6 @@ module.exports = {
         ['Vue项目扩展', 'Vue项目扩展'],
         ['React', 'React'],
         ['小程序', '小程序'],
-        // ['20200504', '20200504'],
-        // ['20200529', '20200529'],
-        // ['20200615,20200622', '20200615,20200622'],
-        // ['20200625', '20200625'],
-        // ['20200811', '20200811'],
-        // ['20200826', '20200826'],
       ]
     }
   },

@@ -42,5 +42,7 @@
 ### 使用方法
 
 ```html
-<div class="card tap-active"></div> 
+<div class="card tap-active">
+    示例文字
+</div>
 ```

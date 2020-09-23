@@ -2,7 +2,10 @@
 
 ### var.less|.scss
 
+请自行替换@
+
 ```less
+@background: #f2f3f5;
 @primary: #c03131;
 @aux-primary: #74a5e7;
 @aux-success: #b8cb50;
@@ -23,6 +26,7 @@
 @font14: 14px;
 @font15: 15px;
 @font16: 16px;
+@font18: 18px;
 @font20: 20px;
 @font22: 22px;
 @font24: 24px;
