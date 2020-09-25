@@ -116,7 +116,22 @@ module.exports = {
           ]
         }
       ],
-      '/javascript/': [],
+      '/javascript/': [
+        {
+          title: '数据类型',
+          collapsable: false,
+          children: [
+            ['session01/', 'Introduction'],
+            ['session01/typeof操作符', 'typeof操作符'],
+            ['session01/Undefined类型', 'Undefined类型'],
+            ['session01/Null类型', 'Null类型'],
+            ['session01/Boolean类型', 'Boolean类型'],
+            ['session01/Number类型', 'Number类型'],
+            ['session01/String类型', 'String类型'],
+            ['session01/Object类型', 'Object类型'],
+          ]
+        }
+      ],
       '/resume/': [
         ['简历', '简历'],
         ['HTML和CSS', 'HTML和CSS'],
